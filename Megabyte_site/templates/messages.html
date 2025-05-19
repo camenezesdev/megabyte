@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mensagens - Megabyte CyberSec</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Mensagens Recebidas</h1>
+    <a href="/logout">Sair</a>
+    <table border="1">
+        <tr>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Mensagem</th>
+        </tr>
+        {% for c in contacts %}
+        <tr>
+            <td>{{ c.name }}</td>
+            <td>{{ c.email }}</td>
+            <td>{{ c.message }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
